@@ -15,8 +15,8 @@ enum Hand Hand_getRandom(void)
 
 enum Hand Hand_getRandomChildrenMode(enum Hand player, unsigned long long wins, unsigned long long losses)
 {
-    if (wins <= losses) 
-        return Hand_getLosingHand(player);
+    if (wins <= losses)
+        return Hand_getRandomLosingHand(player);
     else
         return Hand_getRandom();
 }
@@ -26,7 +26,7 @@ enum Hand Hand_getRandomLosingHand(enum Hand winning)
     unsigned int randomNumber = getRandomNumber(0, 2);
     if (randomNumber % 2 == 0)
         return (enum Hand)(((size_t)winning + 2) % HAND_SIZE);
-    else 
+    else
         return (enum Hand)(((size_t)winning + 4) % HAND_SIZE);
 }
 

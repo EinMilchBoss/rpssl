@@ -33,7 +33,7 @@ void printGameInformation(void)
     printf("\n");
 }
 
-void printSettings(void) 
+void printSettings(void)
 {
     printf("Settings:\n");
     printf("*********\n");
