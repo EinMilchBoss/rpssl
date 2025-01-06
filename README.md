@@ -19,6 +19,12 @@ After you built the executable, run the following command in your terminal:
 ./rpssl.exe
 ```
 
+Alternatively, you can also run this game in children mode. With this mode active, you will always win at least as many times as you lose:
+
+```bash
+RPSSL_CHILDREN_MODE=1 ./rpssl.exe
+```
+
 # Tests
 
 There is only one test regarding the custom random number generator in "random.c". This test can be executed by doing the following:
